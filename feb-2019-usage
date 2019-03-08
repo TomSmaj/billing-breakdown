@@ -1,0 +1,17 @@
+2019-02-28	Maps and Street View API	Dynamic Maps	29	com.googleapis/services/mapsbilling-pa/MapLoad
+2019-02-27	Maps and Street View API	Dynamic Maps	65	com.googleapis/services/mapsbilling-pa/MapLoad
+2019-02-26	Maps and Street View API	Dynamic Maps	18	com.googleapis/services/mapsbilling-pa/MapLoad
+2019-02-25	Geocoding API	Geocoding	1	com.google.apis.maps/services/geocoding/Requests
+2019-02-22	Maps Embed API	Embed	14	com.googleapis/services/maps-embed-backend/BasicRequests
+2019-02-22	Places API	Basic Data	3	com.google.apis/services/places/V1FieldGroupBasic
+2019-02-22	Places API	Find Place	3	com.google.apis/services/places/V1ServiceFindPlaceFromText
+2019-02-21	Maps and Street View API	Dynamic Maps	8	com.googleapis/services/mapsbilling-pa/MapLoad
+2019-02-21	Places API	Atmosphere Data	13	com.google.apis/services/places/V1FieldGroupCharacter
+2019-02-21	Places API	Autocomplete (included with Places Details) - Per Session	13	com.google.apis/services/places/V1ServiceAutocompleteDetails
+2019-02-21	Places API	Autocomplete without Places Details - Per Session	1	com.google.apis/services/places/V1ServiceAutocompleteSession
+2019-02-21	Places API	Basic Data	13	com.google.apis/services/places/V1FieldGroupBasic
+2019-02-21	Places API	Contact Data	13	com.google.apis/services/places/V1FieldGroupContact
+2019-02-21	Places API	Places Details	13	com.google.apis/services/places/V1ServiceDetails
+2019-02-15	Geocoding API	Geocoding	4	com.google.apis.maps/services/geocoding/Requests
+2019-02-11	Geocoding API	Geocoding	7	com.google.apis.maps/services/geocoding/Requests
+2019-02-11	Maps and Street View API	Dynamic Maps	30	com.googleapis/services/mapsbilling-pa/MapLoad
