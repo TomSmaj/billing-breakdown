@@ -69,8 +69,35 @@ $(document).ready(function () {
         console.log(costArr);
         console.log(runningCosts);
         console.log(totalCosts);
+        printToPage(totalCosts, costArr);
         // $(".output").text(ptext);
     });
+
+
+    //////////////////////////////////////////////// functions for printing to screen ////////////////////////////////////////////////
+
+    function printToPage(tArr, cArr) {
+        let outStr = "";
+        let key = "";
+        let tval = 0, cval = 0;
+        for(let we = 0; we < tArr.length; we++){
+            key = Object.keys(tArr[we])[0];
+            // tval = tArr[we][key];
+            // cval = cArr[we][key];
+            tval = Number.parseFloat(tArr[we][key]).toFixed(2);
+            cval = Number.parseFloat(cArr[we][key]).toFixed(2);
+            outStr += `<div class = \"row\">
+                        <div class=\"col-4\">${key}</div>
+                        <div class=\"col-4\">$${cval}</div>
+                        <div class=\"col-4\">$${tval}</div>
+                    </div>`
+        }
+
+        $(".output").html(outStr);
+    }
+
+    //////////////////////////////////////////////// functions for printing to screen ////////////////////////////////////////////////
+
 
     //////////////////////////////////////////////// functions for parsing the text ////////////////////////////////////////////////
     function parseText(inp) {
@@ -274,7 +301,7 @@ $(document).ready(function () {
 
     function genTotalCost(cArr) {
         var totals = [];
-        var prevDate = "";
+        var rArr = [];
         for (qw = 0; qw < cArr.length; qw++) {
             var date = Object.keys(cArr[qw])[0];
             if (qw === 0) {
@@ -283,8 +310,10 @@ $(document).ready(function () {
             else {
                 totals.push(cArr[qw][date] + totals[qw-1]);
             }
+            rArr.push({[date]: totals[qw]});
         }
-        return totals;
+
+        return rArr;
     }
     //////////////////////////////////////////////// functions for calculating cost ////////////////////////////////////////////////
 
