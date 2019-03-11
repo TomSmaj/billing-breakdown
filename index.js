@@ -1,20 +1,90 @@
 var skuList = [
     "Mobile Native Static Maps", "Mobile Native Dynamic Maps", "Embed", "Embed Advanced", "Static Maps", "Dynamic Maps", "Static Street View", "Dynamic Street View",
-    "Directions", "Directions Advanced", "Directions Matrix Advanced", "Geocoding", "Geolocation", "Time Zone", "Elevation"
+    "Directions", "Directions Advanced", "Distance Matrix", "Distance Matrix Advanced", "Roads - Route Traveled", "Roads - Nearest Road", "Roads - Speed Limits",
+    "Autocomplete - Per Request", "Query Autocomplete - Per Request", "Autocomplete (included with Places Details) - Per Session", "Autocomplete without Places Details - Per Session",
+    "Places Details", "Basic Data", "Contact Data", "Atmosphere Data", "Find Place", "Find Place - ID only", "Find Current Place", "Places Photo", "Places - Nearby Search", "Places - Text Search",
+    "Geocoding", "Geolocation", "Time Zone", "Elevation"
 ];
 
 var serviceList = [
-    "Maps and Street View API", "Geocoding API", "Maps Embed API", "Places API"
+    "Directions API",
+    "Distance Matrix API",
+    "Geocoding API",
+    "Maps and Street View API",
+    "Maps Embed API",
+    "Places API",
+    "Places API for iOS",
+    "Roads API"
 ];
 
 var prices = {
+    "Mobile Native Static Maps": {
+        rate1: 0.00,
+        rate2: 0.00
+    },
+    "Mobile Native Dynamic Maps": {
+        rate1: 0.00,
+        rate2: 0.00
+    },
     "Embed": {
         rate1: 0.00,
         rate2: 0.00
     },
+    "Embed Advanced": {
+        rate1: 14.00,
+        rate2: 11.20
+    },
+    "Static Maps": {
+        rate1: 2.00,
+        rate2: 1.60
+    },
     "Dynamic Maps": {
         rate1: 7.00,
         rate2: 5.60
+    },
+    "Static Street View": {
+        rate1: 7.00,
+        rate2: 5.60
+    },
+    "Dynamic Street View": {
+        rate1: 14.00,
+        rate2: 11.20
+    },
+    "Directions": {
+        rate1: 5.00,
+        rate2: 4.00
+    },
+    "Directions Advanced": {
+        rate1: 10.00,
+        rate2: 8.00
+    },
+    "Distance Matrix": {
+        rate1: 5.00,
+        rate2: 4.00
+    },
+    "Distance Matrix Advanced": {
+        rate1: 10.00,
+        rate2: 8.00
+    },
+    "Roads - Route Traveled": {
+        rate1: 10.00,
+        rate2: 8.00
+    },
+    "Roads - Nearest Road": {
+        rate1: 10.00,
+        rate2: 8.00
+    },
+    "Roads - Speed Limits": {
+        rate1: 20.00,
+        rate2: 16.00
+    },
+    "Autocomplete - Per Request": {
+        rate1: 2.83,
+        rate2: 2.27
+    },
+    "Query Autocomplete - Per Request": {
+        rate1: 2.83,
+        rate2: 2.27
     },
     "Autocomplete (included with Places Details) - Per Session": {
         rate1: 0.00,
@@ -23,6 +93,30 @@ var prices = {
     "Autocomplete without Places Details - Per Session": {
         rate1: 17.00,
         rate2: 13.60
+    },
+    "Find Place": {
+        rate1: 17.00,
+        rate2: 13.60
+    },
+    "Find Place - ID only": {
+        rate1: 0.00,
+        rate2: 0.00
+    },
+    "Find Current Place": {
+        rate1: 30.00,
+        rate2: 24.60
+    },
+    "Places Photo": {
+        rate1: 7.00,
+        rate2: 5.60
+    },
+    "Places - Nearby Search": {
+        rate1: 32.00,
+        rate2: 25.60
+    },
+    "Places - Text Search": {
+        rate1: 32.00,
+        rate2: 25.60
     },
     "Basic Data": {
         rate1: 0.00,
@@ -40,11 +134,19 @@ var prices = {
         rate1: 17.00,
         rate2: 13.60
     },
-    "Find Place": {
-        rate1: 17.00,
-        rate2: 13.60
-    },
     "Geocoding": {
+        rate1: 5.00,
+        rate2: 4.00
+    },
+    "Geolocation": {
+        rate1: 5.00,
+        rate2: 4.00
+    },
+    "Time Zone": {
+        rate1: 5.00,
+        rate2: 4.00
+    },
+    "Elevation": {
         rate1: 5.00,
         rate2: 4.00
     }
@@ -70,7 +172,6 @@ $(document).ready(function () {
         console.log(runningCosts);
         console.log(totalCosts);
         printToPage(totalCosts, costArr);
-        // $(".output").text(ptext);
     });
 
 
@@ -96,7 +197,7 @@ $(document).ready(function () {
         $(".output").html(outStr);
     }
 
-    //////////////////////////////////////////////// functions for printing to screen ////////////////////////////////////////////////
+    //////////////////////////////////////////////// functions for printing to screen end////////////////////////////////////////////
 
 
     //////////////////////////////////////////////// functions for parsing the text ////////////////////////////////////////////////
@@ -203,7 +304,7 @@ $(document).ready(function () {
         }
         return false;
     }
-    //////////////////////////////////////////////// functions for parsing the text ////////////////////////////////////////////////
+    //////////////////////////////////////////////// functions for parsing the text end////////////////////////////////////////////
 
 
     //////////////////////////////////////////////// functions for calculating cost ////////////////////////////////////////////////
@@ -315,6 +416,6 @@ $(document).ready(function () {
 
         return rArr;
     }
-    //////////////////////////////////////////////// functions for calculating cost ////////////////////////////////////////////////
+    //////////////////////////////////////////////// functions for calculating cost end////////////////////////////////////////////
 
 });
